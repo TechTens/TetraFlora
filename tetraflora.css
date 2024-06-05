@@ -1,0 +1,454 @@
+:root {
+  --blue: #1c3144;
+  --asparagus: #7ea16b;
+  --tea: #b7e3cc;
+  --white: #ece7e7;
+  --burgandy: #70161e;
+}
+
+body {
+  height: 100%;
+  margin: 15px;
+
+  /* For mobile phones: */
+  [class*="body"] {
+    width: 100%;
+  }
+}
+
+/*head nav*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  position: relative;
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--asparagus);
+}
+
+li {
+  display: inline;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+l li :hover {
+  background-color: var(--tea);
+}
+
+.searchbar {
+  display: inline;
+  max-width: 100%;
+}
+
+/*dropdown menu*/
+
+.dropbtn {
+  background-color: var(--blue);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  position: relative;
+  display: inline;
+  float: inline-start;
+}
+
+.dropdown {
+  position: sticky;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: static;
+  overflow-y: scroll;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  height: 100px;
+  box-shadow: var(--tea);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: inline-block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+/*headings*/
+h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 300px;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+/*search bar*/
+#search-container {
+  position: inherit;
+}
+/*buttons*/
+.primaryb {
+  background-color: var(--burgandy);
+  border-radius: 4px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  transition-duration: 0.4s;
+  width: 200px;
+  height: 35px;
+  color: var(--tea);
+}
+.secondaryb {
+  background-color: var(--blue);
+  opacity: 1;
+  border-radius: 4px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #ddd;
+  transition-duration: 0.4s;
+  width: 300px;
+  height: 60px;
+  text-align: center;
+}
+
+.primaryb:hover {
+  background-color: var(--asparagus);
+  color: white;
+}
+
+.secondaryb:hover {
+  background-color: var(--asparagus);
+  color: white;
+}
+
+.submit {
+  width: 3%;
+  height: 3%;
+  text-align: center;
+  position: relative;
+}
+/*hamburger icon*/
+
+div.icon {
+  position: relative;
+  width: 35px;
+  height: 5px;
+  background-color: var(--white);
+  margin: 5px 0;
+}
+
+/*accessibility break points*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+/*photo animation */
+.container {
+  position: relative;
+  display: inline-block;
+  margin: 2%;
+  min-width: 25%;
+  height: auto;
+}
+
+.image {
+  display: block;
+  width: 30%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 90%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #1c3144;
+}
+
+.container:hover .overlay {
+  opacity: 0.8;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -webkit-scrollbar {
+    display: none;
+  }
+}
+
+/*footer*/
+footer {
+  background-color: var(--asparagus);
+  position: relative;
+  font-size: medium;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  min-width: auto;
+  @media screen {
+  }
+}
+p.address {
+  float: left;
+  text-align: left;
+  margin: 3%;
+}
+p.sublink {
+  float: right;
+  text-align: center;
+  margin: 3%;
+}
+
+.footlogo {
+  position: static;
+}
+/*welcome overlay*/
+#overlay {
+  position: fixed;
+  display: none;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--blue);
+  opacity: 0.7;
+  z-index: 2;
+  cursor: pointer;
+  text-align: center;
+}
+#text {
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/*contact form*/
+.contactform {
+  position: static;
+  display: grid;
+  float: right;
+}
+#message {
+  width: 400px;
+  height: 300px;
+}
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 15px;
+  margin: 3px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  display: inline;
+  float: inline-start;
+  position: relative;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Twitter Icons*/
+.fa-twitter {
+  background: var(--burgandy);
+  opacity: 0.8;
+  color: white;
+  display: inline-block;
+}
+
+/* Instagram icons*/
+.fa-instagram {
+  background: var(--burgandy);
+  color: white;
+  display: inline-block;
+}
+.fa-github {
+  background: var(--burgandy);
+  color: white;
+  display: inline-block;
+}
+.fa-envelope {
+  background: var(--burgandy);
+  color: white;
+  display: inline-block;
+}
+.fa-phone {
+  background: var(--burgandy);
+  color: white;
+  display: inline-block;
+}
+
+/*slideshoe settings */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+/* text on about us page*/
+.maint {
+  text-align: center;
+}
+
+.tetrastore {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
